@@ -5,13 +5,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="m-10">
-      <SignedOut>
+     {/*  <SignedOut>
         <SignInButton />
       </SignedOut>
 
       <SignedIn>
         <UserButton />
-      </SignedIn>
+      </SignedIn> */}
+      home page
     </div>
   );
 }
