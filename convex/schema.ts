@@ -14,3 +14,5 @@ export default defineSchema({
 
     }).index("by_clerk_id", ["clerkId"] ),
 });
+
+//https://brief-egret-99.clerk.accounts.dev
