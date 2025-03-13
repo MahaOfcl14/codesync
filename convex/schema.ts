@@ -1,5 +1,6 @@
 import { defineSchema, defineTable } from 'convex/server'
 import{v} from "convex/values"
+import { title } from 'process';
 
 export default defineSchema({
     users: defineTable({
@@ -13,6 +14,30 @@ export default defineSchema({
 
 
     }).index("by_clerk_id", ["clerkId"] ),
+
+    interviews: defineTable({
+        title:v.string(),
+        description: v.optional(v.string()),
+        startTime: v.number(),
+        endTime: v.optional(v.number()), // 30 mins 45 mins
+        status: v.string(),
+        streamCallId:v.string(),
+        candidateId: v.string(),
+        interviewerIds: v.array(v.string()),
+
+
+    })
+    .index("by_candidate_id", ["candidateId"])
+    .index("by_stream_call_id", ["streamCallId"]),
+
+    Comments : defineTable({
+        content: v.string(),
+        rating: v.number(),
+        interviewerId: v.string(),
+        interviewId: v.id("interviews"),
+ })
+ .index("by_interview_id", ["interviewId"]),
+
 });
 
 //https://brief-egret-99.clerk.accounts.dev
