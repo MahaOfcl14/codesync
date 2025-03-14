@@ -1,10 +1,10 @@
 import React from 'react'
 import StreamClientProvider from "@/components/providers/StreamClientProvider"
 
-function layout({children}:{children: React.ReactNode}) {
+function Layout({children}:{children: React.ReactNode}) {
   return (
-   <StreamClientProvider>layout</StreamClientProvider>
+   <StreamClientProvider>{children}</StreamClientProvider>
   )
 }
 
-export default layout
+export default Layout
