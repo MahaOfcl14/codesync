@@ -6,6 +6,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from './ui/resiz
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem } from './ui/dropdown-menu';
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
 import { Button } from './ui/button';
+import EndCallButton from './EndCallButton';
 
 function MeetingRoom() {
   const router = useRouter();
@@ -75,7 +76,8 @@ function MeetingRoom() {
                   >
                     <UsersIcon className="size-4" />
                   </Button>
-                  <button>End Call btn</button>
+                 
+                 <EndCallButton />
 
 
                 </div>
