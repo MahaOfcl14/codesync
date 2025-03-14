@@ -42,10 +42,6 @@ function EndCallButton() {
     }
   };
 
-
-
-
-
   return (
     <Button variant={"destructive"} onClick={endCall}>
         End Meeting
